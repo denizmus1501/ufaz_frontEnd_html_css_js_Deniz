@@ -7,6 +7,276 @@
   <meta name="keywords" content="Deniz Mustafayeva, CV, curriculum vitae, Computer Science, UFAZ, artificial intelligence, data science, scientific computing, Python, NumPy, Baku">
   <meta name="author" content="Deniz Mustafayeva">
   <title>Deniz Mustafayeva | Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&amp;family=Merriweather:wght@400;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+  <style>
+    /* PW N2 stylesheet
+       Text formatting, web fonts, lists, links, boxes and tables only.
+       No positioning, no layout, no design of structural markup. */
+
+    /* ---------- Variables (pseudo-class :root) ---------- */
+    :root {
+      --text: #1f2933;
+      --muted: #52606d;
+      --accent: #0b5cad;
+      --accent-dark: #083f78;
+      --rule: #cbd2d9;
+      --soft: #f0f4f8;
+      --zebra: #f7f9fb;
+      --font-text: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+      --font-title: "Merriweather", Georgia, serif;
+      --font-code: "Fira Code", "Courier New", monospace;
+    }
+
+    ::selection {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    /* ---------- Base text (element selector) ---------- */
+    body {
+      font-family: var(--font-text);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: #ffffff;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- Headings (grouped selector) ---------- */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-title);
+      line-height: 1.25;
+      color: var(--accent-dark);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.02em;
+      border-bottom: 4px solid var(--accent);
+      padding-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.25rem;
+      margin-top: 2rem;
+    }
+
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.1rem; font-style: italic; }
+    h5 { font-size: 1rem; text-decoration: underline; }
+    h6 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+
+    /* Pseudo-class :target highlights the section reached by a menu link */
+    h2:target, h3:target, h4:target {
+      background-color: #fff3bf;
+    }
+
+    /* ---------- Paragraphs (sibling selectors, class, pseudo-element) ---------- */
+    h1 + p {                          /* paragraph right after the name */
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    #profile + p::first-line {        /* id + adjacent sibling + pseudo-element */
+      font-variant: small-caps;
+      letter-spacing: 0.03em;
+    }
+
+    p.note {                          /* class selector */
+      background-color: var(--soft);
+      border-left: 5px solid var(--accent);
+      padding: 0.75rem 1rem;
+    }
+
+    body > p:last-child {             /* child selector + pseudo-class */
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    hr {
+      border: 0;
+      border-top: 2px dotted var(--rule);
+      margin: 2rem 0;
+    }
+
+    /* ---------- Image (box) ---------- */
+    img#photo {
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 0.25rem;
+      background-color: #ffffff;
+    }
+
+    /* ---------- Lists ---------- */
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+
+    ul > li {                         /* child selector */
+      list-style-type: square;
+      margin-bottom: 0.25rem;
+    }
+
+    ol > li {
+      margin-bottom: 0.5rem;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    li::marker {                      /* pseudo-element */
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    ol[reversed] > li::marker {       /* attribute selector */
+      font-size: 1.1em;
+    }
+
+    dt {
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-top: 0.6rem;
+    }
+
+    dt + dd {
+      margin-left: 1.5rem;
+    }
+
+    /* ---------- Links (order: link, visited, hover, focus, active) ---------- */
+    a:link { color: var(--accent); }
+    a:visited { color: #5b3f9e; }
+    a:hover {
+      color: var(--accent-dark);
+      background-color: #e8f1fb;
+      text-decoration-thickness: 2px;
+    }
+    a:focus {
+      outline: 3px solid #f0b429;
+      outline-offset: 2px;
+    }
+    a:active { color: #c0392b; }
+
+    a[href^="#"] {                    /* internal links */
+      text-decoration-style: dotted;
+    }
+
+    a[target="_blank"]::after {       /* external links */
+      content: " \2197";
+      font-size: 0.8em;
+    }
+
+    a[href^="tel:"]::before {         /* telephone link */
+      content: "\260E\00a0";
+    }
+
+    /* ---------- Text-level semantics ---------- */
+    strong { font-weight: 700; color: var(--accent-dark); }
+    b { font-weight: 600; }
+    em { color: var(--accent-dark); }
+    i[lang] { color: var(--muted); }
+
+    abbr[title] {
+      text-decoration: underline dotted;
+      cursor: help;
+    }
+
+    time {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    sub, sup {
+      font-size: 0.75em;
+      line-height: 0;
+    }
+
+    code {
+      font-family: var(--font-code);
+      font-size: 0.88em;
+      color: #8a1c4a;
+      background-color: var(--soft);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 0.05em 0.35em;
+      overflow-wrap: anywhere;
+    }
+
+    /* ---------- Contact box ---------- */
+    address {
+      font-style: normal;
+      line-height: 1.9;
+      background-color: var(--soft);
+      border-left: 5px solid var(--accent);
+      padding: 0.75rem 1rem;
+    }
+
+    address::first-line {
+      font-weight: 700;
+      font-size: 1.15em;
+    }
+
+    /* ---------- Tables ---------- */
+    table {
+      border-collapse: collapse;
+      border: 2px solid var(--accent);
+      font-size: 0.95rem;
+    }
+
+    caption {
+      caption-side: top;
+      text-align: left;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-style: italic;
+      color: var(--accent-dark);
+      padding: 0.5rem 0;
+    }
+
+    th, td {
+      border: 1px solid var(--rule);
+      padding: 0.45rem 0.7rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead th {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: var(--zebra);
+    }
+
+    tbody tr:hover {
+      background-color: #e8f1fb;
+    }
+
+    th[scope="row"],
+    th[scope="rowgroup"] {
+      background-color: var(--soft);
+      color: var(--accent-dark);
+    }
+
+    table:not([id]) tbody td:first-child {   /* documentation tables: first column */
+      background-color: var(--soft);
+    }
+
+    tfoot th, tfoot td {
+      background-color: #e4ecf5;
+      font-weight: 700;
+      border-top: 3px double var(--accent);
+    }
+  </style>
 </head>
 <body>
   <h1 id="top">Deniz Mustafayeva</h1>
@@ -218,11 +488,11 @@
     <li>try the examples and display them in a browser;</li>
     <li>apply it to the web document.</li>
   </ol>
-  <p>
+  <p class="note">
     The page contains only semantic content elements. The neutral elements (<code>div</code>, <code>span</code>),
     the sectioning elements (<code>header</code>, <code>footer</code>, <code>article</code>, <code>section</code>,
     <code>aside</code>, <code>nav</code>) and all obsolete or deprecated elements and attributes are deliberately not used.
-    No <abbr title="Cascading Style Sheets">CSS</abbr> is applied in this first part.
+    <abbr title="Cascading Style Sheets">CSS</abbr> is limited to text formatting, web fonts, lists, links, boxes and tables, in the <code>style</code> element of the head. There is no positioning and no layout styling.
   </p>
 
   <ul>
@@ -259,7 +529,7 @@
         <td><code>&lt;head&gt;</code></td>
         <td>Metadata of the document (encoding, title, description…). Its content is not displayed.</td>
         <td>None.</td>
-        <td>Contains five <code>meta</code> elements and the <code>title</code>.</td>
+        <td>Contains five <code>meta</code> elements, the <code>title</code>, the <code>link</code> elements and the <code>style</code> element.</td>
       </tr>
       <tr>
         <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
@@ -298,6 +568,18 @@
         <td>"Deniz Mustafayeva | Curriculum Vitae".</td>
       </tr>
       <tr>
+        <td><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/…"&gt;</code></td>
+        <td>Empty element that links an external resource to the document. With <code>rel="stylesheet"</code> it loads a CSS file, here the web fonts; with <code>rel="preconnect"</code> it opens an early connection to a server.</td>
+        <td><code>rel</code>: relationship with the resource. <code>href</code>: address of the resource. <code>crossorigin</code>: needed for the font files.</td>
+        <td>Loads the web fonts (Merriweather, Source Sans 3 and Fira Code) from Google Fonts.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;style&gt;</code></td>
+        <td>Contains the CSS rules of the document. It is placed in the head and its content is not displayed.</td>
+        <td>None needed in HTML5 (<code>type="text/css"</code> is optional).</td>
+        <td>All the text formatting, list, link, box and table styles of the CV.</td>
+      </tr>
+      <tr>
         <td><code>&lt;body&gt;</code></td>
         <td>Contains everything rendered in the browser window.</td>
         <td>None.</td>
@@ -323,7 +605,7 @@
       <tr>
         <td><code>&lt;p&gt;</code></td>
         <td>A paragraph, displayed as a block.</td>
-        <td>None.</td>
+        <td><code>class</code>.</td>
         <td>Profile, dates and explanations.</td>
       </tr>
       <tr>
@@ -539,6 +821,11 @@
         <td>Headings, image, address and tables.</td>
       </tr>
       <tr>
+        <th scope="row"><code>class</code></th>
+        <td>Name of a group of elements, used as a CSS class selector (<code>p.note</code>). Several elements can share the same class.</td>
+        <td>The note of the documentation introduction.</td>
+      </tr>
+      <tr>
         <th scope="row"><code>lang</code></th>
         <td>Language of an element when it differs from the language of the page.</td>
         <td>French, Azerbaijani, Russian and Korean words.</td>
@@ -553,6 +840,6 @@
   <hr>
 
   <p><a href="#top" title="Back to the top of the page">Back to the top</a></p>
-  <p>Last updated: <time datetime="2026-11-02">2 November 2026</time></p>
+  <p>Last updated: <time datetime="2026-11-03">3 November 2026</time></p>
 </body>
 </html>
